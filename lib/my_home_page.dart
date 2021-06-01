@@ -18,6 +18,13 @@ class MyHomePage extends StatelessWidget {
                     ))),
           ),
           ListTile(
+            title: Text('Ativos Manuais'),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => FaqsPage(
+                      category: 'ativos-manuais',
+                    ))),
+          ),
+          ListTile(
             title: Text('Outros'),
             onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (BuildContext context) => FaqsPage(

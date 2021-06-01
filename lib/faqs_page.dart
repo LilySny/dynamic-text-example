@@ -7,7 +7,7 @@ class FaqsPage extends StatelessWidget {
 
   const FaqsPage({
     Key key,
-    this.category = 'outros',
+    @required this.category,
   }) : super(key: key);
 
   @override
@@ -45,7 +45,7 @@ class FaqsPage extends StatelessWidget {
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => DynamicQuestionPage(
                           title: data['titulo'],
-                          text: data['texto'],
+                          text: data['texto'].replaceAll("\\n", "\n"),
                         ),
                       )),
                     )
